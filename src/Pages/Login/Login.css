@@ -1,15 +1,15 @@
-#form{
+.form{
     text-align: center;
     font-family: sans-serif;
     position: relative;
     top: 240px;
 }
 
-h1{
-    color: rgb(26, 152, 255);
+.tudo{
+    color: rgb(6, 92, 179);
 }
 
-#logo{
+.logol{
     width: 400px;
     padding: 0px;
     position: absolute;
@@ -19,7 +19,7 @@ h1{
     
 }
 
-input{
+.cardsus, .pass{
     text-align: center;
     position: relative;
     border-radius: 10px;
@@ -31,10 +31,10 @@ input{
 
 
     
-button{
+.enter{
     font-family: sans-serif;
     color: white;
-    background-color: rgb(26, 152, 255);
+    background-color: rgb(6, 92, 179);
     position: relative;
     top: 240px;
     left: 45%;
@@ -47,7 +47,7 @@ button{
 }
 
 
-#box{
+.boxf{
     margin-left: 370px;
     border-radius: 10px;
     padding: 200px;
@@ -58,7 +58,7 @@ button{
     z-index: -1;
 }
 
-a{
+.create, .remember{
     text-decoration: none;
     position: relative;
     top: 110px;
@@ -72,7 +72,7 @@ a{
 
 @media (max-width: 900px) {
 
-    #box {
+    .boxf {
         width: 90%;
         padding: 100px 20px;
         margin-left: 0;         
@@ -81,49 +81,45 @@ a{
         top: 0;
     }
 
-    #logo {
+    .logol {
         width: 250px;
         left: 50%;
         transform: translateX(-50%);
         top: -20px;
     }
 
-    #form {
+    .form {
         top: 160px;
         padding: 0 20px;
     }
 
-    #cartao,
-    #Senha {
+    .cardsus,
+    .pass {
         width: 90%;
         max-width: 300px;
     }
 
-    a {
+    .create, .remember {
         top: 40px;
         margin: 20px;
         display: inline-block;
     }
 
-    footer {
-        top: 250px;
-        padding: 20px;
-    }
 }
 
 @media (max-width: 500px) {
 
-    #box {
+    .boxf {
         width: 100%;          
         padding: 60px 15px;
         border-radius: 8px;
     }
 
-    #logo {
+    .logol {
         width: 180px;
     }
 
-    button {
+    .enter {
         width: 100%;
         max-width: 150px;
         padding: 10px;
@@ -133,11 +129,10 @@ a{
 
 /* animações */
 
-
-button:hover{
+.enter:hover{
     color: black;
 }
 
-input:focus{
+.cardsus, .pass:focus{
     outline: none;
 }

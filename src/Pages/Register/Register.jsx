@@ -1,39 +1,37 @@
 import "./Register.css";
 
-function Component3 (){
+export function Register (){
 
     return (
 
-        <div id="all">
+        <div className="all-register">
 
-            <img src="/logo.png" id="logo" />
+            <img src="/logo.png" className="logo-register" />
         
-            <h1 id="t1" >Cadastro</h1>
+            <h1 className="h1-register" >Cadastro</h1>
 
             {/* inputs */}
 
-            <div class="inputs">
+            <div className="inputs-register">
 
-                <input type="text" id="name" placeholder="Insira seu Nome"></input>
-                <input type="text" id="card" placeholder="Cartão do SUS"></input>
-                <input type="password" id="password" placeholder="Sua senha"></input>
-                <input type="text" id="date" placeholder="Nascimento"></input>
-                <input type="text" id="loc" placeholder="Municipio/Bairro"></input>
-                <input type="tel" id="tel" placeholder="Nº Tel/Celular"></input>
+                <input type="text" className="name" placeholder="Insira seu Nome"></input>
+                <input type="text" className="card-register" placeholder="Cartão do SUS"></input>
+                <input type="password" className="pass-register" placeholder="Sua senha"></input>
+                <input type="text" className="date" placeholder="Nascimento"></input>
+                <input type="text" className="loc" placeholder="Municipio/Bairro"></input>
+                <input type="tel" className="tel" placeholder="Nº Tel/Celular"></input>
 
             </div>
 
             {/* buttons */}
 
-           <button class="b" type="submit">Cadastrar-se</button>
+           <button className="b-register" type="submit">Cadastrar-se</button>
 
             {/* boxs */}
-            <div class="box"></div>
-            <div class="box1"></div>
+            <div className="box1-register"></div>
+            <div className="box2-register"></div>
 
         </div>
 
     )
 }
-
-export default Component3;

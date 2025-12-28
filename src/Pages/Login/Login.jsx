@@ -1,8 +1,7 @@
 import "./Login.css";
 
 
-
-function Componente1() {
+export function Login() {
 
   function entrar() {
     console.log("Entrou!");
@@ -10,18 +9,19 @@ function Componente1() {
 
   return (
 
-    <div id="tudo">
+    <div className="tudo">
 
-      <img src="/logop.png" id="logo" />
+      <img src="/logop.png" className="logol" />
 
 
 
-      <form id="form">
+      <form className ="form">
 
-        <h1>Bem-Vindo:</h1>
+        <h1 className="title" >Bem-Vindo:</h1>
         <br />
 
         <input
+          className="cardsus"
           id="cartao"
           type="text"
           placeholder="Cartão do SUS"
@@ -32,6 +32,7 @@ function Componente1() {
         <br />
 
         <input
+          className="pass"
           id="Senha"
           type="password"
           placeholder="Senha"
@@ -40,17 +41,17 @@ function Componente1() {
 
         <br />
 
-        <a href="#" id="link1">Criar conta?</a>
-        <a href="#" id="link2">Esqueci a senha</a>
+        <a href="#" className="create">Criar conta?</a>
+        <a href="#" className="remember">Esqueci a senha</a>
 
 
       </form>
 
       <br />
 
-      <button type="submit" onClick={entrar}>Entrar</button>
+      <button className="enter" type="submit" onClick={entrar}>Entrar</button>
 
-      <div id="box"></div>
+      <div className="boxf"></div>
 
 
     </div>
@@ -58,5 +59,3 @@ function Componente1() {
 
   );
 }
-
-export default Componente1;

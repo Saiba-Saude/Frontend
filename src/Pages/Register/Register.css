@@ -1,14 +1,14 @@
-#all{
+.all-register{
     font-family: sans-serif;
 }
 
-#t1{
+.h1-register{
     position: fixed;
     right: 40%;
     top: 12%;
 }
 
-.box{
+.box1-register{
     background-color: white;
     position: fixed;
     right: 15%;
@@ -20,7 +20,7 @@
     z-index: -900;
 }
 
-.box1{
+.box2-register{
     background-color: rgb(216, 216, 216);
     padding: 500px;
     position: fixed;
@@ -29,7 +29,7 @@
     z-index: -999;
 }
 
-.inputs{
+.inputs-register{
     position: fixed;
     right: 23%;
     top: 25%;
@@ -38,7 +38,9 @@
     gap: 20px;
 }
 
-input{
+.name,.card-register,
+.pass-register,.date,
+.loc,.tel{
     background-color:rgba(169, 169, 169, 0.432);
     text-align: center;
     padding: 13px;
@@ -51,7 +53,7 @@ input{
 
 /* buttons */
 
-button{
+.b-register{
     background-color: rgb(6, 92, 179);
     color: white;
     position: fixed;
@@ -61,13 +63,13 @@ button{
     border: none;
     border-radius: 10px;
 
-
-
 }
 
 /* animations */
 
-input:focus{
+.name,.card-register,
+.pass-register,.date,
+.loc,.tel:focus{
 
     outline: none;
 }

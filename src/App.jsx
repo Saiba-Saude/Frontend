@@ -1,10 +1,10 @@
-import Component3 from "./Register/Register"
+import { RouterProvider } from "react-router-dom"
+import { routes } from "./Routes/Index.routes"
 
-function App(){
+export default function App(){
   return(
   <div>
-    <Component3/>
+    <RouterProvider router={routes} />
   </div>
 )}
 
-export default App

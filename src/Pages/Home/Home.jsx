@@ -1,15 +1,19 @@
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
-function Componente2 (){
+export function Home(){
+
+
+   const navigation = useNavigate();
 
     return (
-        <div id="all">
+        <div className="all-home">
 
-            <img src="/logo.png" id="logo" />
+            <img src="/logo.png" className="logo-home" />
 
-            <div class="title">
+            <div className="title-home">
 
-                <h1 id="t1">
+                <h1 className="h1-home">
                     Como podemos te 
                     <br/>
                    ajudar hoje?
@@ -18,25 +22,23 @@ function Componente2 (){
             </div>
 
 
-            <div id="buttons">
+            <div className="buttons-home">
                 
-                <button id="b1" class="b">Meu Perfil</button>
-                <button id="b2" class="b">Campanhas e Anúncios</button>
-                <button id="b3" class="b">Histórico Médico</button>
-                <button id="b4" class="b">Unidade de Saúde</button>
-                <button id="b5" class="b">Angendar Consulta</button>
-                <button id="b6" class="b">Configurações</button>
-                <button id="b7" class="b">Sair</button>
+                <button className="b-home" >Meu Perfil</button>
+                <button className="b-home" >Campanhas e Anúncios</button>
+                <button className="b-home">Histórico Médico</button>
+                <button className="b-home">Unidade de Saúde</button>
+                <button className="b-home">Angendar Consulta</button>
+                <button className="b-home">Configurações</button>
+                <button className="b-home"onClick={() => navigation("/")}>Sair</button>
 
             </div>
 
-        <div id="box1"></div>
-        <div id="box2"></div>
+        <div className="box-home1"></div>
+        <div className="box-home2"></div>
 
         </div>
 
 
     );
 }
-
-export default Componente2;
