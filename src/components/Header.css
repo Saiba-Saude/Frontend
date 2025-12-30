@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+  height: 72px;
+
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+}
+
+.nav-logo {
+  height: 160px;
+  width: auto;
+}
+
+/* botoes a direita */
+.Nav-botoes {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+}
+
+/* Botoes */
+.botao-cadastro {
+  padding: 8px 16px;
+  border: 1px solid #2a67ec;
+  background: transparent;
+  color: #2a67ec;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.botao-login{
+  padding: 8px 16px;
+  background: #2a67ec;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
