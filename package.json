@@ -1,9 +1,6 @@
 {
-<<<<<<< HEAD
+
   "name": "proejeto01",
-=======
-  "name": "meu-primeiro-projeto-react",
->>>>>>> f55a26dc4b1c69f18fa04e8829b6326d3f7a1419
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,12 +12,8 @@
   },
   "dependencies": {
     "react": "^19.2.0",
-<<<<<<< HEAD
-    "react-dom": "^19.2.0"
-=======
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.11.0"
->>>>>>> f55a26dc4b1c69f18fa04e8829b6326d3f7a1419
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

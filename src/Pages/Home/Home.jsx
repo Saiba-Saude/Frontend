@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
+import { Alert } from "../../Components/Alert";
+
 
 export function Home(){
-
 
    const navigation = useNavigate();
 
@@ -10,6 +11,16 @@ export function Home(){
         <div className="all-home">
 
             <img src="/logo.png" className="logo-home" />
+            <img src="/OnlineDoctor.png" className="onDoctor" />
+            
+
+            <div className="alert-home">
+                <Alert titlle="Vacinação contra: Gripe, Chikungunya, Febre Amarela, Sarampo" 
+                text="Proteção para todas as fases! Das primeiras vacinas até a adolescência: vacinar é cuidar. Campanha aberta para menores de 18 anos. Proteja-se!"
+                />
+                
+            </div>
+
 
             <div className="title-home">
 
@@ -38,7 +49,6 @@ export function Home(){
         <div className="box-home2"></div>
 
         </div>
-
 
     );
 }
