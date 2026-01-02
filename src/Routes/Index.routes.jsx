@@ -4,7 +4,7 @@ import { Login } from "../Pages/Login/Login";
 import { Home } from "../Pages/Home/Home";
 import { Register } from "../Pages/Register/Register";
 import { Campaign } from "../Pages/Campaign/Campaign";
-import { Alert } from "../Components/Alert";
+import { Appointment } from "../Pages/Appointment/Appointment";
 
 export const routes = createBrowserRouter([
     {
@@ -24,7 +24,7 @@ export const routes = createBrowserRouter([
         element: <Campaign/>
     },
     {
-        path: "/alert",
-        element: <Alert/>
+        path:  "/appointment",
+        element: <Appointment/>
     }
 ]);

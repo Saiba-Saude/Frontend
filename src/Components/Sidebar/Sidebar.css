@@ -1,0 +1,27 @@
+.box-sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    padding: 120px;
+    box-shadow: 0 3px 10px black;
+    z-index: 50;
+}
+
+.buttons-sidebar{
+    position: fixed;
+    left: 20px;
+    top: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 999;
+}
+
+.logo-sidebar{
+    position: fixed;
+    bottom: 60%;
+    right: 69%;
+    width: 600px;
+    z-index: 51;
+}
