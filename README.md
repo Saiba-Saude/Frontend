@@ -1,61 +1,74 @@
-# Saíba+ Saúde — Frontend
+Saiba Mais Saúde — Frontend
 
-## 🎯 Objetivo do Projeto
+Interface Web para Digitalização dos Serviços de Saúde Pública
 
-O Saíba+ Saúde é uma solução digital criada com o propósito de **melhorar a vida da população**, reduzindo a burocracia associada a processos manuais e ao uso excessivo de papéis na área da saúde.  
-O projeto busca tornar o acesso às informações mais simples, rápido e organizado, promovendo eficiência, transparência e inclusão digital.
+Visão Geral
 
-O frontend representa o **ponto de contato direto com o usuário**, oferecendo uma interface intuitiva, acessível e moderna, pensada para facilitar o uso por pessoas com diferentes níveis de familiaridade com tecnologia.
+O Saiba Mais Saúde – Frontend é a camada de interface da plataforma desenvolvida para apoiar a modernização do acesso aos serviços de saúde pública no município de Igarassu.
+A aplicação web tem como principal finalidade permitir que o cidadão interaja com o sistema de saúde de forma digital, clara e organizada, reduzindo a dependência de processos presenciais e documentos físicos.
 
----
+O frontend atua como ponto central de contato entre a população e os serviços oferecidos, priorizando simplicidade, acessibilidade e uma experiência de uso intuitiva, especialmente para usuários com baixo nível de letramento digital.
 
-## 💡 Visão Geral
+Objetivo da Aplicação
 
-A proposta do frontend é transformar processos antes complexos e burocráticos em uma **experiência digital clara e objetiva**.  
-A interface foi pensada para:
+Facilitar o acesso da população aos serviços de saúde pública
 
-- Reduzir erros causados por processos manuais  
-- Facilitar o acesso a informações importantes  
-- Tornar a navegação simples e fluida  
-- Melhorar a comunicação entre usuários e o sistema  
+Reduzir filas, deslocamentos e burocracias presenciais
 
-Tudo isso contribui para um ambiente mais eficiente, confiável e centrado no cidadão.
+Centralizar informações importantes de saúde em um ambiente digital
 
----
+Oferecer uma navegação clara e objetiva para diferentes perfis de usuários
 
-## 🖥️ Tecnologias Utilizadas
+Melhorar a comunicação entre cidadão e sistema de saúde
 
-- React.js  
-- JavaScript  
-- HTML5  
-- CSS3  
-- Vite  
+Funcionalidades Desenvolvidas
 
-Essas tecnologias garantem desempenho, escalabilidade e uma experiência de uso moderna.
+Cadastro e gerenciamento de usuários
 
----
+Visualização de informações pessoais e dados relacionados à saúde
 
-## 🚀 Impacto Esperado
+Agendamento online de consultas e atendimentos
 
-- Diminuição da dependência de documentos físicos  
-- Mais agilidade nos processos  
-- Melhor organização das informações  
-- Maior acessibilidade para a população  
+Acesso a notificações de campanhas de vacinação e ações preventivas
 
-O frontend atua como uma ponte entre a tecnologia e as pessoas, tornando o sistema simples de usar e fácil de entender.
+Integração com API REST para consumo e exibição de dados do backend
 
----
+Interface e Experiência do Usuário
 
-## ✨ Considerações Finais
+Interface projetada com foco em usabilidade e acessibilidade
 
-O Saíba+ Saúde Frontend foi desenvolvido com foco em **usabilidade, clareza e impacto social**, reforçando o compromisso do projeto em usar a tecnologia como ferramenta de transformação.
+Layout responsivo, adaptável a computadores, tablets e smartphones
 
----
+Prototipação inicial desenvolvida no Figma para validação de fluxos
 
-## 👥 Autor
+Navegação simplificada, priorizando clareza e redução de complexidade
 
-**Equipe 2 Start 2025**  
-- Kauã  
-- Hiago  
-- Thiago  
-- Lucas  
+Tecnologias Utilizadas
+
+React
+
+JavaScript
+
+HTML5
+
+CSS3
+
+Consumo de API REST
+
+Situação Atual do Projeto
+
+Em desenvolvimento
+
+Ajustes finais na interface
+
+Integração contínua com o backend
+
+Testes de usabilidade e validação funcional
+
+Autores
+
+Equipe 2 Start 2025
+Kauã
+Hiago
+Thiago
+Lucas
