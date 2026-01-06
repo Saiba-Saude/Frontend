@@ -41,10 +41,8 @@ A API foi pensada para garantir integridade, consistência e confiabilidade das 
 ## Tecnologias Utilizadas
 
 - Node.js
-- Express
 - MySQL
 - API REST
-- Dotenv
 
 ## Execução do Projeto
 
