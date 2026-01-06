@@ -9,9 +9,9 @@ export function Appointment (){
 
 
             <h1 className="t1-appointment">Faça seu agendamento online</h1>
+            <h1 className="t2-appointment">Status</h1>
 
-
-            <div>
+            <div className="sidebar-appointment">
                 <Sidebar />
             </div>
             
@@ -21,7 +21,7 @@ export function Appointment (){
 
                 <select className="select-appointment">
 
-                    <option value="">selecione...</option>
+                    <option value="">Selecione...</option>
                     <option value="USF Agamenon Magalhães II">USF Agamenon Magalhães II</option>
                     <option value="USF Ana Albuquerque">USF Ana Albuquerque</option>
                     <option value="USF Beira Mar II">USF Beira Mar II</option>
@@ -54,7 +54,7 @@ export function Appointment (){
                 <input type="time" className="input-appointment"/>
 
                 <label className="label-appointment">Tipo de Consulta</label>
-                <select className="input-appointment">
+                <select className="select-appointment">
 
                     <option value="">Selecione o serviço...</option>
                     <option value="consulta_medica">Consulta Médica (Clínico Geral)</option>
@@ -72,6 +72,9 @@ export function Appointment (){
                 </select>
 
             </div>
+
+            <button type="submit" className="b-appointment">b</button>
+
             
             <div className="box-appointment"></div>
             <div className="box1-appointment"></div>

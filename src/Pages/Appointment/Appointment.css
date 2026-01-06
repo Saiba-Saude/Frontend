@@ -2,6 +2,8 @@
     font-family: sans-serif;
 }
 
+/* boxs */
+
 .box-appointment{
     background-color: rgb(202, 201, 201);
     position: fixed;
@@ -16,38 +18,50 @@
 
 .box1-appointment{
     background-color: white;
-    position: relative;
-    bottom: 120px;
-    left: 27%;
-    padding: 13%;
-    width: 0%;
+    position: fixed;
+    bottom: 13%;
+    left: 28%;
+    padding: 40px;
+    width: 20%;
+    height: 55%;
     border-radius: 15px;
     z-index: -4;
 }
 
 .box2-appointment{
     background-color: white;
-    position: relative;
-    bottom: 465px;
+    position: fixed;
+    bottom:13%;
     left: 60%;
-    padding: 13%;
-    width: 0%;
+    padding: 40px;
+    width: 20%;
+    height: 55%;
     border-radius: 15px;
     z-index: -4;
 }
+
+/* text */
 
 .t1-appointment{
     color: black;
     position: relative;
     left: 28%;
-    top: 70px;
-    
+    top: 40px;
 }
 
-.form-appointment{
+.t2-appointment{
+    color: black;
     position: relative;
-    top: 170px;
-    left: 33%;
+    left: 70%;
+    top: 70px;
+}
+
+/* inputs */
+
+.form-appointment{
+    position: fixed;
+    top: 190px;
+    left: 31%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -55,11 +69,35 @@
    
 }
 
-.input-appointment{
+.input-appointment {
     text-align: center;
-    width: 70%;
+    padding: 10px;
+    width:92%;
+    border-radius: 10px;
+    
 }
 
 .select-appointment{
-    width: 72%;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* buttons */
+
+.b-appointment{
+    position: fixed;
+    right: 20%;
+    padding: 10px;
+
+}
+
+/* focus */
+
+.select-appointment:focus{
+    outline: none;
+}
+
+.input-appointment:focus{
+    outline: none;
 }
