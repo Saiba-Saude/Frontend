@@ -1,56 +1,76 @@
-# Saiba Mais Saúde — Frontend
-Interface Web para Digitalização dos Serviços de Saúde Pública
+# Saiba Mais Saúde — Backend
+API para Gestão e Organização dos Serviços de Saúde Pública
 
 ## Visão Geral
 
-O Saiba Mais Saúde – Frontend é a camada de interface da plataforma desenvolvida para apoiar a modernização do acesso aos serviços de saúde pública no município de Igarassu.
-A aplicação web tem como principal finalidade permitir que o cidadão interaja com o sistema de saúde de forma digital, clara e organizada, reduzindo a dependência de processos presenciais e documentos físicos.
+O Saiba Mais Saúde – Backend é responsável por toda a lógica de negócio, persistência de dados e comunicação entre a aplicação web e o banco de dados.
+Ele sustenta a digitalização dos processos administrativos e assistenciais, substituindo fluxos manuais e registros em papel por operações estruturadas, seguras e automatizadas.
 
-O frontend atua como ponto central de contato entre a população e os serviços oferecidos, priorizando simplicidade, acessibilidade e uma experiência de uso intuitiva, especialmente para usuários com baixo nível de letramento digital.
+A API foi pensada para garantir integridade, consistência e confiabilidade das informações relacionadas aos usuários e aos atendimentos de saúde.
 
-## Objetivo da Aplicação
+## Objetivo da API
 
-- Facilitar o acesso da população aos serviços de saúde pública
-- Reduzir filas, deslocamentos e burocracias presenciais
-- Centralizar informações importantes de saúde em um ambiente digital
-- Oferecer uma navegação clara e objetiva para diferentes perfis de usuários
-- Melhorar a comunicação entre cidadão e sistema de saúde
+- Centralizar e organizar dados de usuários e atendimentos
+- Garantir consistência e integridade das informações
+- Eliminar a dependência de registros físicos e papéis
+- Disponibilizar serviços padronizados para consumo pelo frontend
+- Sustentar a evolução e escalabilidade futura da plataforma
 
-## Funcionalidades Desenvolvidas
+## Funcionalidades Implementadas
 
-- Cadastro e gerenciamento de usuários
-- Visualização de informações pessoais e dados relacionados à saúde
-- Agendamento online de consultas e atendimentos
-- Acesso a notificações de campanhas de vacinação e ações preventivas
-- Integração com API REST para consumo e exibição de dados do backend
+- API REST para cadastro e gerenciamento de usuários
+- API para agendamento de consultas e serviços de saúde
+- Registro e consulta de histórico médico
+- Validação e tratamento de dados recebidos
+- Comunicação estruturada com o frontend
 
-## Interface e Experiência do Usuário
+## Persistência e Organização dos Dados
 
-- Interface projetada com foco em usabilidade e acessibilidade
-- Layout responsivo, adaptável a computadores, tablets e smartphones
-- Prototipação inicial desenvolvida no Figma para validação de fluxos
-- Navegação simplificada, priorizando clareza e redução de complexidade
+- Banco de dados relacional MySQL
+- Estrutura organizada para usuários, consultas e históricos
+- Armazenamento seguro e rastreável das informações
+- Melhoria na confiabilidade e no controle dos dados
+
+## Arquitetura da Aplicação
+
+- Separação clara entre frontend e backend
+- Organização baseada em serviços
+- Código estruturado para facilitar manutenção e evolução
+- Preparação para futuras camadas de validação e controle de acesso
 
 ## Tecnologias Utilizadas
 
-- React
-- JavaScript
-- HTML5
-- CSS3
-- Consumo de API REST
+- Node.js
+- Express
+- MySQL
+- API REST
+- Dotenv
 
-## Situação Atual do Projeto
+## Execução do Projeto
 
+### Pré-requisitos
+
+- Node.js versão 18 ou superior
+- Banco de dados MySQL em execução
+
+### Passos para execução
+
+```bash
+cd backend
+npm install
+npm run dev
+Situação Atual do Projeto
 Em desenvolvimento
 
-- Ajustes finais na interface
-- Integração contínua com o backend
-- Testes de usabilidade e validação funcional
+Ajustes finais de integração com o frontend
 
-## Autores
+Testes de consistência e desempenho
 
-Equipe 2 Start 2025  
-Kauã  
-Hiago  
-Thiago  
+Validação completa dos fluxos de dados
+
+Autores
+Equipe 2 Start 2025
+Kauã
+Hiago
+Thiago
 Lucas
