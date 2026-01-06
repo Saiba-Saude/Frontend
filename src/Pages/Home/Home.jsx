@@ -7,8 +7,7 @@ export function Home(){
     return (
         <div className="all-home">
 
-            
-            <img src="/OnlineDoctor.png" className="onDoctor" />
+            <img src="../images/Umbrelladoctor.png" className="UmbrellaDoctor" />
             
 
             <div className="alert-home">

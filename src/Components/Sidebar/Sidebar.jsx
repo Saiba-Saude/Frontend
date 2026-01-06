@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./Sidebar.css";
+import { Topleft } from "../Topleft/Topleft";
 
 
 export function Sidebar() {
@@ -10,7 +11,9 @@ export function Sidebar() {
 
         <div all-sidebar>
 
-                <img src="/logo.png" className="logo-sidebar" />
+                <div className="logo-sidebar">
+                    <Topleft />
+                </div>
 
             <div className="buttons-sidebar">
                 

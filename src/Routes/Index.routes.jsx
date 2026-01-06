@@ -5,6 +5,8 @@ import { Home } from "../Pages/Home/Home";
 import { Register } from "../Pages/Register/Register";
 import { Campaign } from "../Pages/Campaign/Campaign";
 import { Appointment } from "../Pages/Appointment/Appointment";
+import { Topleft } from "../Components/Topleft/Topleft";
+
 
 export const routes = createBrowserRouter([
     {
@@ -26,5 +28,10 @@ export const routes = createBrowserRouter([
     {
         path:  "/appointment",
         element: <Appointment/>
+    },
+    {
+        path:  "/topleft",
+        element:<Topleft />
     }
+
 ]);

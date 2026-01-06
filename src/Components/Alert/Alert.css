@@ -7,10 +7,18 @@
     border-radius: 15px
 }
 
+/* buttons */
+
 .b-alert{
     background-color: rgb(6, 92, 179);
     color: white;
     padding: 9px;
     border: none;
     border-radius: 15px;
+}
+
+/* animated */
+
+.b-alert:hover{
+    background-color: rgb(72, 163, 255);
 }
