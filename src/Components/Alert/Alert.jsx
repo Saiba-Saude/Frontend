@@ -1,8 +1,10 @@
 
 import "./Alert.css";
-
+import { useNavigate } from "react-router-dom";
 
 export function Alert ({titlle, text}){
+
+    const navigation = useNavigate();
 
     return (
 
@@ -12,7 +14,7 @@ export function Alert ({titlle, text}){
 
             <p className="p-alert">{text}</p>
                 
-            <button type="button" className="b-alert">Inscrever-se</button>
+            <button type="button" className="b-alert" onClick={() => navigation("/appointment")} >Inscrever-se</button>
         </div>
 
     )

@@ -6,11 +6,13 @@ import { Register } from "../Pages/Register/Register";
 import { Campaign } from "../Pages/Campaign/Campaign";
 import { Appointment } from "../Pages/Appointment/Appointment";
 import { Topleft } from "../Components/Topleft/Topleft";
+import { Finish } from "../Pages/Finish/Finish";
+import { USB } from "../Pages/USB/USB.JSX";
 
 
 export const routes = createBrowserRouter([
     {
-        path: "/",
+        path: "/login",
         element: <Login />
     }, 
     {
@@ -18,7 +20,7 @@ export const routes = createBrowserRouter([
         element: <Home />
     },
     {
-        path: "/register",
+        path: "/",
         element: <Register />
     },
     {
@@ -32,6 +34,14 @@ export const routes = createBrowserRouter([
     {
         path:  "/topleft",
         element:<Topleft />
+    },
+    {
+        path:  "/finish",
+        element:<Finish />
+    },
+    {
+        path:  "/usb",
+        element: <USB />
     }
 
 ]);

@@ -1,0 +1,20 @@
+
+.box-warning{
+    font-family:sans-serif;
+    background-color: rgb(202, 201, 201);
+    padding: 8%;
+    width: 100%;
+    border-radius: 15px
+}
+
+.b-warning{
+    background-color: rgb(6, 92, 179);
+    color: white;
+    padding: 9px;
+    border: none;
+    border-radius: 15px;
+}
+
+.b-warning:hover{
+    background-color: rgb(72, 163, 255);
+}

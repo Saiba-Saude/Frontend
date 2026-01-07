@@ -16,6 +16,16 @@
 
 }
 
+.box-appointment2{
+    background-color: rgb(6, 92, 179);
+    padding: 500px;
+    z-index: -100;
+    border-radius: 1000px;
+    position: fixed;
+    left: 50%;
+    top: -150px;
+}
+
 .box1-appointment{
     background-color: white;
     position: fixed;
@@ -40,20 +50,43 @@
     z-index: -4;
 }
 
+.box3-appointment{
+    background-color: rgb(221, 220, 220);
+    position: fixed;
+    top: 36%;
+    right: 18%;
+    padding: 10px;
+    width: 17%;
+    height: 30%;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 8px 20px rgb(44, 44, 44);
+}
+
 /* text */
 
 .t1-appointment{
     color: black;
-    position: relative;
-    left: 28%;
+    position: fixed;
+    left: 40%;
     top: 40px;
 }
 
 .t2-appointment{
     color: black;
-    position: relative;
-    left: 70%;
-    top: 70px;
+    position: fixed;
+    left: 69%;
+    top: 130px;
+}
+
+.h1-appointment{
+    color: rgb(87, 87, 87);
+    font-family: sans-serif;
+    font-size: 38px;
+    width: 350px;
+    position: fixed;
+    top: 6%;
+    left: 23%;
 }
 
 /* inputs */
@@ -86,9 +119,29 @@
 /* buttons */
 
 .b-appointment{
+    background-color: rgb(6, 92, 179);
+    color: white;
     position: fixed;
-    right: 20%;
+    top: 75%;
+    right: 18%;
     padding: 10px;
+    width: 19%;
+    border: none;
+    border-radius: 15px;
+
+}
+
+.status-appointment{
+    background-color: rgb(221, 220, 220);
+    position: fixed;
+    top: 36%;
+    right: 18%;
+    padding: 10px;
+    width: 17%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
 
 }
 
@@ -100,4 +153,9 @@
 
 .input-appointment:focus{
     outline: none;
+}
+
+
+.b-appointment:hover{
+    background-color: rgb(72, 163, 255);
 }

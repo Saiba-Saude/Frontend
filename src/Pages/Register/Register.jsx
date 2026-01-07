@@ -1,7 +1,13 @@
 import { Topleft } from "../../Components/Topleft/Topleft";
+import { useNavigate } from "react-router-dom";
+
 import "./Register.css";
 
+
+
 export function Register (){
+
+    const navigation = useNavigate();
 
     return (
 
@@ -14,7 +20,7 @@ export function Register (){
             <div className="inputs-register">
                 
                 <input type="text" className="name" placeholder="Insira seu Nome"></input>
-                <input type="text" className="card-register" placeholder="Cartão do SUS"></input>
+                <input type="int" className="card-register" placeholder="Cartão do SUS"></input>
                 <input type="password" className="pass-register" placeholder="Sua senha"></input>
                 <input type="text" className="date" placeholder="Nascimento"></input>
                 <input type="text" className="loc" placeholder="Municipio/Bairro"></input>
@@ -24,6 +30,7 @@ export function Register (){
             {/* buttons */}
 
            <button className="b-register" type="submit">Cadastrar-se</button>
+           <button className="b-register1" type="submit" onClick={() => navigation("/login")} >Entrar</button>
 
             {/* boxs */}
 
@@ -45,7 +52,7 @@ export function Register (){
                     <br/>
 
                 <input type="checkbox" className ="checkbox-register"/>
-                <span>Eu aceito a <a href="#" className="link-register">Política de privacidade</a></span>
+                <span>Eu aceito a <a href="" className="link-register">Política de privacidade</a></span>
             </footer>
 
         </div>

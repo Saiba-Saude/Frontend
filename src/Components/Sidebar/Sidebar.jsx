@@ -17,11 +17,11 @@ export function Sidebar() {
 
             <div className="buttons-sidebar">
                 
-                <button className="b-home" >Meu Perfil</button>
-                <button className="b-home" onClick={() => navigation("campaign")}>Campanhas e Anúncios</button>
-                <button className="b-home">Histórico Médico</button>
-                <button className="b-home">Unidade de Saúde</button>
-                <button className="b-home" onClick={() => navigation("appointment")}>Angendar Consulta</button>
+                <button className="b-home" onClick={() => navigation("/home")}>Início</button>
+                <button className="b-home" onClick={() => navigation("/campaign")}>Campanhas e Anúncios</button>
+                <button className="b-home">em desenvolvimento</button>
+                <button className="b-home" onClick={() => navigation("/usb")}>Unidade de Saúde  </button>
+                <button className="b-home" onClick={() => navigation("/appointment")}>Angendar Consulta</button>
                 <button className="b-home">Configurações</button>
                 <button className="b-home"onClick={() => navigation("/")}>Sair</button>
 

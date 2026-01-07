@@ -69,13 +69,27 @@
     background-color: rgb(6, 92, 179);
     color: white;
     position: fixed;
-    right: 28%;
+    right: 33%;
     bottom: 10%;
     padding: 10px;
     border: none;
     border-radius: 10px;
 
 }
+
+.b-register1{
+    background-color: rgb(6, 92, 179);
+    color: white;
+    position: fixed;
+    width: 8%;
+    right: 22%;
+    bottom: 10%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+
+}
+
 
 /* images */
 

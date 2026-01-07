@@ -1,138 +1,136 @@
-.form{
-    text-align: center;
-    font-family: sans-serif;
-    position: relative;
-    top: 240px;
+.all-login{
+  font-family: Arial, sans-serif;
 }
 
-.tudo{
-    color: rgb(6, 92, 179);
+ 
+
+
+.logo-login{
+  position: fixed;
+  bottom: 65%;
+  right: 72%;
+  width: 40%;
 }
 
-.logol{
-    width: 400px;
-    padding: 0px;
-    position: absolute;
-    top: -40px;
-    left: 470px;
-    z-index: -1;
-    
-}
-
-.cardsus, .pass{
-    text-align: center;
-    position: relative;
-    border-radius: 10px;
-    padding: 10px;
-    width: 300px;
-    border: none;
-    box-shadow: 0 2px 6px black;
+.login-container {
+  position: fixed;
+  top: 23%;
+  left: 7%;
+  width: 80%;
+  height: 62%;
+  background: #d8d8d8;
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  z-index: -10;
 }
 
 
-    
-.enter{
-    font-family: sans-serif;
-    color: white;
-    background-color: rgb(6, 92, 179);
-    position: relative;
-    top: 240px;
-    left: 45%;
-    padding: 8px;
-    width:130px;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 2px 6px black;
-    
+.login-illustration img {
+  width: 450px;
+  max-width: 100%;
 }
 
-
-.boxf{
-    margin-left: 370px;
-    border-radius: 10px;
-    padding: 200px;
-    width: 200px;
-    position: relative;
-    bottom: 70px;
-    box-shadow: 0 4px 12px black;
-    z-index: -1;
+.doctors-login{
+  position: fixed;
+  top: 20%;
+  left: 10%;
+  width: 40%;
+  z-index: 90;
 }
 
-.create, .remember{
-    text-decoration: none;
-    position: relative;
-    top: 110px;
-    margin: 100px;
+.login-card {
+  background: #ffffff;
+  position: fixed;
+  top: 30%;
+  right: 10%;
+  padding: 25px;
+  width: 350px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 8px 20px rgb(85, 85, 85);
 }
 
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 8px;
+}
 
-
-/* responsividade aqui*/
-
-
-@media (max-width: 900px) {
-
-    .boxf {
-        width: 90%;
-        padding: 100px 20px;
-        margin-left: 0;         
-        left: 50%;              
-        transform: translateX(-50%);
-        top: 0;
-    }
-
-    .logol {
-        width: 250px;
-        left: 50%;
-        transform: translateX(-50%);
-        top: -20px;
-    }
-
-    .form {
-        top: 160px;
-        padding: 0 20px;
-    }
-
-    .cardsus,
-    .pass {
-        width: 90%;
-        max-width: 300px;
-    }
-
-    .create, .remember {
-        top: 40px;
-        margin: 20px;
-        display: inline-block;
-    }
+.login-card input {
+  padding: 12px;
+  width: 80%;
+  border-radius: 17px;
+  border: none;
+  background: #d8d8d8;
+  outline: none;
 
 }
 
-@media (max-width: 500px) {
+.login-card button {
+ 
+  padding: 12px;
+  width: 83%;
+  border-radius: 8px;
+  border: none;
+  background: rgb(6, 92, 179);
+  color: white;
+ 
+  cursor: pointer;
+}
 
-    .boxf {
-        width: 100%;          
-        padding: 60px 15px;
-        border-radius: 8px;
-    }
-
-    .logol {
-        width: 180px;
-    }
-
-    .enter {
-        width: 100%;
-        max-width: 150px;
-        padding: 10px;
-    }
+.login-card button:hover {
+  opacity: 0.9;
 }
 
 
-/* animações */
-
-.enter:hover{
-    color: black;
+.links-login{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
 }
 
-.cardsus, .pass:focus{
-    outline: none;
+.login-card span {
+  color: #3b6db3;
+  cursor: pointer;
+}
+
+
+/* reponsividade */
+
+@media (max-width: 768px) {
+  .all-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .logo-login, 
+  .doctors-login, 
+  .login-container, 
+  .login-card {
+    position: static;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+  }
+
+  .login-container {
+    height: auto;
+    padding: 20px;
+    background: transparent;
+  }
+
+  .doctors-login {
+    display: block;
+    width: 80%;
+  }
+
+  .login-illustration img {
+    width: 100%;
+  }
 }

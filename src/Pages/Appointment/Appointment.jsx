@@ -1,14 +1,17 @@
 import "./Appointment.css";
 import { Sidebar } from "../../Components/Sidebar/Sidebar";
+import { useNavigate } from "react-router-dom";
 
 export function Appointment (){
+
+    const navigation = useNavigate();
 
     return (
 
         <div className="all-appointment">
 
 
-            <h1 className="t1-appointment">Faça seu agendamento online</h1>
+            <h1 className="t1-appointment">Faça seu agendamento online:</h1>
             <h1 className="t2-appointment">Status</h1>
 
             <div className="sidebar-appointment">
@@ -62,7 +65,7 @@ export function Appointment (){
                     <option value="odontologia">Atendimento Odontológico</option>
                     <option value="vacinacao">Vacinação</option>
                     <option value="pre_natal">Pré-Natal</option>
-                    <option value="prevencao_citopatologico">Prevenção (Papanicolau)</option>
+                    <option value="prevencao_citopatologico">Prevenção</option>
                     <option value="puericultura">Puericultura (Saúde da Criança)</option>
                     <option value="hiperdia">Acompanhamento (Hipertensão/Diabetes)</option>
                     <option value="curativos">Curativos e Procedimentos</option>
@@ -73,12 +76,27 @@ export function Appointment (){
 
             </div>
 
-            <button type="submit" className="b-appointment">b</button>
+           <div className="box-appointment2"></div>
 
+            <button type="submit" className="b-appointment" onClick={() => navigation("/finish")}>Confirmar</button>
+
+                <div className="status-appointment">  <p>
+                        Unidaddes:
+                    </p>
+
+                    <p>
+                        Status:
+                    </p>
+
+                    <p>
+                        Consulta:
+                    </p>
+                </div>
             
             <div className="box-appointment"></div>
             <div className="box1-appointment"></div>
             <div className="box2-appointment"></div>
+           
         </div>
 
 
