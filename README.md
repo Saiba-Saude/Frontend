@@ -1,61 +1,74 @@
-# Saíba+ Saúde — Frontend
+# Saiba Mais Saúde — Backend
+API para Gestão e Organização dos Serviços de Saúde Pública
 
-## 🎯 Objetivo do Projeto
+## Visão Geral
 
-O Saíba+ Saúde é uma solução digital criada com o propósito de **melhorar a vida da população**, reduzindo a burocracia associada a processos manuais e ao uso excessivo de papéis na área da saúde.  
-O projeto busca tornar o acesso às informações mais simples, rápido e organizado, promovendo eficiência, transparência e inclusão digital.
+O Saiba Mais Saúde – Backend é responsável por toda a lógica de negócio, persistência de dados e comunicação entre a aplicação web e o banco de dados.
+Ele sustenta a digitalização dos processos administrativos e assistenciais, substituindo fluxos manuais e registros em papel por operações estruturadas, seguras e automatizadas.
 
-O frontend representa o **ponto de contato direto com o usuário**, oferecendo uma interface intuitiva, acessível e moderna, pensada para facilitar o uso por pessoas com diferentes níveis de familiaridade com tecnologia.
+A API foi pensada para garantir integridade, consistência e confiabilidade das informações relacionadas aos usuários e aos atendimentos de saúde.
 
----
+## Objetivo da API
 
-## 💡 Visão Geral
+- Centralizar e organizar dados de usuários e atendimentos
+- Garantir consistência e integridade das informações
+- Eliminar a dependência de registros físicos e papéis
+- Disponibilizar serviços padronizados para consumo pelo frontend
+- Sustentar a evolução e escalabilidade futura da plataforma
 
-A proposta do frontend é transformar processos antes complexos e burocráticos em uma **experiência digital clara e objetiva**.  
-A interface foi pensada para:
+## Funcionalidades Implementadas
 
-- Reduzir erros causados por processos manuais  
-- Facilitar o acesso a informações importantes  
-- Tornar a navegação simples e fluida  
-- Melhorar a comunicação entre usuários e o sistema  
+- API REST para cadastro e gerenciamento de usuários
+- API para agendamento de consultas e serviços de saúde
+- Registro e consulta de histórico médico
+- Validação e tratamento de dados recebidos
+- Comunicação estruturada com o frontend
 
-Tudo isso contribui para um ambiente mais eficiente, confiável e centrado no cidadão.
+## Persistência e Organização dos Dados
 
----
+- Banco de dados relacional MySQL
+- Estrutura organizada para usuários, consultas e históricos
+- Armazenamento seguro e rastreável das informações
+- Melhoria na confiabilidade e no controle dos dados
 
-## 🖥️ Tecnologias Utilizadas
+## Arquitetura da Aplicação
 
-- React.js  
-- JavaScript  
-- HTML5  
-- CSS3  
-- Vite  
+- Separação clara entre frontend e backend
+- Organização baseada em serviços
+- Código estruturado para facilitar manutenção e evolução
+- Preparação para futuras camadas de validação e controle de acesso
 
-Essas tecnologias garantem desempenho, escalabilidade e uma experiência de uso moderna.
+## Tecnologias Utilizadas
 
----
+- Node.js
+- MySQL
+- API REST
 
-## 🚀 Impacto Esperado
+## Execução do Projeto
 
-- Diminuição da dependência de documentos físicos  
-- Mais agilidade nos processos  
-- Melhor organização das informações  
-- Maior acessibilidade para a população  
+### Pré-requisitos
 
-O frontend atua como uma ponte entre a tecnologia e as pessoas, tornando o sistema simples de usar e fácil de entender.
+- Node.js versão 18 ou superior
+- Banco de dados MySQL em execução
 
----
+### Passos para execução
 
-## ✨ Considerações Finais
+```bash
+cd backend
+npm install
+npm run dev
+Situação Atual do Projeto
+Em desenvolvimento
 
-O Saíba+ Saúde Frontend foi desenvolvido com foco em **usabilidade, clareza e impacto social**, reforçando o compromisso do projeto em usar a tecnologia como ferramenta de transformação.
+Ajustes finais de integração com o frontend
 
----
+Testes de consistência e desempenho
 
-## 👥 Autor
+Validação completa dos fluxos de dados
 
-**Equipe 2 Start 2025**  
-- Kauã  
-- Hiago  
-- Thiago  
-- Lucas  
+Autores
+Equipe 2 Start 2025
+Kauã
+Hiago
+Thiago
+Lucas
