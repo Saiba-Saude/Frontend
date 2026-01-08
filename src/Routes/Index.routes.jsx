@@ -8,6 +8,8 @@ import { Appointment } from "../Pages/Appointment/Appointment";
 import { Topleft } from "../Components/Topleft/Topleft";
 import { Finish } from "../Pages/Finish/Finish";
 import { History } from "../Pages/History/History";
+import { Profile } from "../Pages/Profile/Profile";
+import { USB } from "../Pages/USB/USB.JSX";
 
 
 
@@ -33,8 +35,8 @@ export const routes = createBrowserRouter([
         element: <Appointment/>
     },
     {
-        path:  "/topleft",
-        element:<Topleft />
+        path:  "/usb",
+        element:<USB />
     },
     {
         path:  "/finish",
@@ -43,6 +45,10 @@ export const routes = createBrowserRouter([
     {
         path:  "/history",
         element: <History />
+    },
+    {
+        path:  "/profile",
+        element: <Profile />
     }
 
 ]);

@@ -11,10 +11,10 @@ export function Campaign (){
 
         <div className="all-campaign">
 
-                <h1 className="h1-appointment">
+                {/* <h1 className="h1-campaign">
                     Informe-se:
 
-                </h1>
+                </h1> */}
 
         <div className="topleft-campaign">
             <Topleft />
