@@ -5,15 +5,16 @@
 /* boxs */
 
 .box-appointment{
-    background-color: rgb(202, 201, 201);
+    background-color: rgb(216, 216, 216);
     position: fixed;
-    top: 7%;
-    right: 6%;
-    padding: 20%;
-    width: 30%;
+    top: 10%;
+    left: 21%;
+    padding: 40px;
+    width: 70%;
+    height: 75%;
     border-radius: 15px;
-    z-index: -5;
-
+    opacity: 80%;
+    z-index: -5; 
 }
 
 .box-appointment2{
@@ -29,38 +30,27 @@
 .box1-appointment{
     background-color: white;
     position: fixed;
-    bottom: 13%;
+    top: 20%;
     left: 28%;
     padding: 40px;
     width: 20%;
-    height: 55%;
+    height: 60%;
     border-radius: 15px;
+    box-shadow: 0 3px 3px gray;
     z-index: -4;
 }
 
 .box2-appointment{
     background-color: white;
     position: fixed;
-    bottom:13%;
-    left: 60%;
+    top: 20%;
+    right: 10%;
     padding: 40px;
     width: 20%;
-    height: 55%;
+    height: 60%;
     border-radius: 15px;
+    box-shadow: 0 3px 3px gray;
     z-index: -4;
-}
-
-.box3-appointment{
-    background-color: rgb(221, 220, 220);
-    position: fixed;
-    top: 36%;
-    right: 18%;
-    padding: 10px;
-    width: 17%;
-    height: 30%;
-    border-radius: 15px;
-    border: none;
-    box-shadow: 0 8px 20px rgb(44, 44, 44);
 }
 
 /* text */
@@ -79,41 +69,39 @@
     top: 130px;
 }
 
-.h1-appointment{
-    color: rgb(87, 87, 87);
-    font-family: sans-serif;
-    font-size: 38px;
-    width: 350px;
-    position: fixed;
-    top: 6%;
-    left: 23%;
-}
-
-/* inputs */
+/* inputs/selects */
 
 .form-appointment{
     position: fixed;
-    top: 190px;
+    top: 20%;
     left: 31%;
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 20%;
-   
 }
 
 .input-appointment {
+    background-color: rgba(216, 216, 216, 0.80);
     text-align: center;
     padding: 10px;
     width:92%;
     border-radius: 10px;
-    
+    border: none;
+    box-shadow: 0 3px 3px gray;
 }
 
 .select-appointment{
+    background-color: rgba(216, 216, 216, 0.80);
     padding: 10px;
     width: 100%;
     border-radius: 10px;
+    border: none;
+    box-shadow: 0 3px 3px gray;
+}
+
+.label-appointment{
+    font-size: 13px;
 }
 
 /* buttons */
@@ -121,28 +109,22 @@
 .b-appointment{
     background-color: rgb(6, 92, 179);
     color: white;
-    position: fixed;
-    top: 75%;
-    right: 18%;
+    position: relative;
+    top: 15px;
     padding: 10px;
-    width: 19%;
+    width: 100%;
     border: none;
-    border-radius: 15px;
-
+    border-radius: 14px;
 }
 
 .status-appointment{
-    background-color: rgb(221, 220, 220);
     position: fixed;
-    top: 36%;
-    right: 18%;
-    padding: 10px;
-    width: 17%;
-    height: 30%;
+    top: 20%;
+    right: 12%;
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
-
+    gap: 10px;
+    width: 20%;
 }
 
 /* focus */

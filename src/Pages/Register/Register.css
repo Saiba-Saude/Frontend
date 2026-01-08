@@ -1,6 +1,7 @@
 
 .all-register{
     font-family: sans-serif;
+
 }
 
 /* text */
@@ -32,8 +33,7 @@
     background-color: rgb(216, 216, 216);
     position: fixed;
     padding: 40px;
-    min-width: 0;
-    width: 70%;
+    width: 79%;
     height: 85%;
     right: 7%;
     border-radius: 15px;

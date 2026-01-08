@@ -29,13 +29,13 @@ export function Login() {
         <button type="submit" onClick={() => navigation("/home")}>Entar</button>
 
         <div className="links-login">
-        <p>
+        <apan>
              Ainda não tem conta? <a className="login-link" href=" ">Cadastrar-se</a>
-        </p>
-                
-        <p>
+        </apan>
+                <br/>
+        <span>
              Precisa de ajuda? <a className="login-link" href=" ">Equeci a senha</a>
-        </p>
+        </span>
 
         </div>
 

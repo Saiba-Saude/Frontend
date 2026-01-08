@@ -11,14 +11,16 @@ export function Appointment (){
         <div className="all-appointment">
 
 
-            <h1 className="t1-appointment">Faça seu agendamento online:</h1>
-            <h1 className="t2-appointment">Status</h1>
-
+            {/* <h1 className="t1-appointment">Faça seu agendamento online:</h1> */}
+        
             <div className="sidebar-appointment">
                 <Sidebar />
             </div>
             
             <div className="form-appointment">
+
+                <h1>Agende:</h1>
+
 
                 <label className="label-appointment">Unidade</label>
 
@@ -74,25 +76,17 @@ export function Appointment (){
 
                 </select>
 
+                     <button type="submit" className="b-appointment" onClick={() => navigation("/finish")}>Confirmar</button>
             </div>
 
-           <div className="box-appointment2"></div>
+            <div className="status-appointment">
+                <h1>Acompanhe: </h1>
 
-            <button type="submit" className="b-appointment" onClick={() => navigation("/finish")}>Confirmar</button>
+                <span></span>
 
-                <div className="status-appointment">  <p>
-                        Unidaddes:
-                    </p>
+            </div>
 
-                    <p>
-                        Status:
-                    </p>
-
-                    <p>
-                        Consulta:
-                    </p>
-                </div>
-            
+            <div className="box-appointment2"></div>
             <div className="box-appointment"></div>
             <div className="box1-appointment"></div>
             <div className="box2-appointment"></div>

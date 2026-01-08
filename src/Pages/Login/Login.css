@@ -2,8 +2,6 @@
   font-family: Arial, sans-serif;
 }
 
- 
-
 
 .logo-login{
   position: fixed;
@@ -93,10 +91,7 @@
   font-size: 14px;
 }
 
-.login-card span {
-  color: #3b6db3;
-  cursor: pointer;
-}
+
 
 
 /* reponsividade */
