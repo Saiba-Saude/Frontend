@@ -7,7 +7,8 @@ import { Campaign } from "../Pages/Campaign/Campaign";
 import { Appointment } from "../Pages/Appointment/Appointment";
 import { Topleft } from "../Components/Topleft/Topleft";
 import { Finish } from "../Pages/Finish/Finish";
-import { USB } from "../Pages/USB/USB.JSX";
+import { History } from "../Pages/History/History";
+
 
 
 export const routes = createBrowserRouter([
@@ -40,8 +41,8 @@ export const routes = createBrowserRouter([
         element:<Finish />
     },
     {
-        path:  "/usb",
-        element: <USB />
+        path:  "/history",
+        element: <History />
     }
 
 ]);
