@@ -1,32 +1,22 @@
 import { Sidebar } from "../../Components/Sidebar/Sidebar";
-import { Topleft } from "../../Components/Topleft/Topleft";
+import { PatientHistory } from "../../Components/PatientHistory/PatientHistory";
 import "./History.css";
 
-export function History(){
-    
-    return (
+export function History() {
+  return (
+    <div className="all-history">
 
-        <div className="all-usb">
+      <div className="history-layout">
+        
+        {/* Menu lateral */}
+        <Sidebar />
 
-             {/* puxando o components "Sidebar" */}
+        {/* Conteúdo principal */}
+        <main className="history-content">
+          <PatientHistory />
+        </main>
 
-            <div className="sidebar-usb"> 
-            <Topleft />
-            </div>
-
-             {/* puxando o components "Topleft" */}
-
-            <div className="sidebar-usb">
-                <Sidebar />
-            </div>
-
-             {/* crie seu codigo a partir daqui */}
-
-
-
-             
-
-        </div>
-    )
-
+      </div>
+    </div>
+  );
 }

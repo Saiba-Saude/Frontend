@@ -10,8 +10,7 @@ export function Home(){
             <img src="../images/Umbrelladoctor.png" className="UmbrellaDoctor" />
             
 
-            <div className="alert-home">
-                <Alert titlle="Vacinação contra: Gripe, Chikungunya, Febre Amarela, Sarampo" 
+            <div className="alert-home"> <Alert titlle="Vacinação contra: Gripe, Chikungunya, Febre Amarela, Sarampo" 
                 text="Proteção para todas as fases! Das primeiras vacinas até a adolescência: vacinar é cuidar. Campanha aberta para menores de 18 anos. Proteja-se!"
                 />
                 

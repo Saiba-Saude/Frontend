@@ -20,7 +20,7 @@ export function Sidebar() {
                 <button className="b-home" onClick={() => navigation("/home")}>Início</button>
                 <button className="b-home" onClick={() => navigation("/profile")}>Meu Perfil</button>
                 <button className="b-home" onClick={() => navigation("/history")}>Histórico Médico</button>
-                <button className="b-home" onClick={() => navigation("/appointment")}>Angendar Consulta</button>
+                <button className="b-home" onClick={() => navigation("/appointment")}>Agendar Consulta</button>
                 <button className="b-home" onClick={() => navigation("/campaign")}>Campanhas e Anúncios</button>
                 <button className="b-home" onClick={() => navigation("/usb")}>Unidades de Saúde</button>
                 <button className="b-home" onClick={() => navigation("/")}>Sair</button>

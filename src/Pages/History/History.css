@@ -1,5 +1,86 @@
+/* Container principal da página History */
+.all-history {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f9fb;
+  font-family: sans-serif;
+}
 
+/* Topo (componente Topleft) permanece posicionado pelo seu próprio CSS */
 
+/* Conteúdo principal */
+.history-content {
+  margin-left: 260px; /* espaço para a sidebar fixa */
+  padding: 32px 24px;
+  min-height: calc(100vh - 70px);
+  box-sizing: border-box;
+}
 
+.history-body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.history-body h1 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
 
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.history-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.history-card p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+.history-card span {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Breakpoints */
+@media (max-width: 1024px) {
+  .history-content {
+    margin-left: 220px;
+    padding: 24px;
+  }
+  .history-body h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-content {
+    margin-left: 0;
+    padding: 20px 16px 120px 16px;
+  }
+  .history-body h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-body h1 {
+    font-size: 20px;
+  }
+}
+.history-section {
+    position: relative;
+    overflow: hidden; /* Corta qualquer box de fundo que tente sair do limite */
+}
