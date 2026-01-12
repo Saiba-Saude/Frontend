@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react"
+import axios from 'axios'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -8,10 +10,14 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Stethoscope, Briefcase, User, ArrowLeft, CheckCircle } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
+import { api } from "../service/api"
 
 export function CadastroPage({ onNavigate }) {
   const [selectedProfile, setSelectedProfile] = useState(null)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [formData, setFormData] = useState({
+    municipio: "Igarassu"
+  })
   const { toast } = useToast()
 
   const profiles = [
@@ -47,58 +53,95 @@ export function CadastroPage({ onNavigate }) {
 
   const formFields = {
     paciente: [
-      { id: "nome", label: "Nome Completo", type: "text", placeholder: "Digite seu nome completo", colSpan: 2 },
-      { id: "sexo", label: "Sexo", type: "select", options: ["Masculino", "Feminino", "Outro"] },
-      { id: "dataNascimento", label: "Data de Nascimento", type: "date" },
-      { id: "cartaoSus", label: "Número do Cartão do SUS", type: "text", placeholder: "Digite o número do cartão" },
-      { id: "telefone", label: "Telefone", type: "tel", placeholder: "(81) 00000-0000" },
+      { id: "nome", label: "Nome Completo", type: "text", colSpan: 2 },
+      { id: "sexo", label: "Sexo", type: "select", options: ["M","F"] },
+      { id: "nascimento", label: "Data de Nascimento", type: "date" },
+      { id: "cartaosus", label: "Cartão SUS", type: "text" },
+      { id: "telefone", label: "Telefone", type: "tel" },
       { id: "bairro", label: "Bairro", type: "select", options: bairrosIgarassu },
-      { id: "municipio", label: "Município", type: "text", placeholder: "Igarassu", defaultValue: "Igarassu" },
-      { id: "senha", label: "Senha", type: "password", placeholder: "Crie uma senha", colSpan: 2 },
+      { id: "municipio", label: "Município", type: "text", defaultValue: "Igarassu" },
+      { id: "senha", label: "Senha", type: "password", colSpan: 2 },
     ],
     medico: [
-      { id: "nome", label: "Nome Completo", type: "text", placeholder: "Digite seu nome completo", colSpan: 2 },
-      { id: "sexo", label: "Sexo", type: "select", options: ["Masculino", "Feminino", "Outro"] },
-      { id: "dataNascimento", label: "Data de Nascimento", type: "date" },
-      { id: "crm", label: "CRM", type: "text", placeholder: "Digite seu CRM" },
-      { id: "especializacao", label: "Especialização", type: "text", placeholder: "Ex: Cardiologia" },
-      { id: "senha", label: "Senha", type: "password", placeholder: "Crie uma senha", colSpan: 2 },
+      { id: "nome", label: "Nome Completo", type: "text", colSpan: 2 },
+      { id: "sexo", label: "Sexo", type: "select", options: ["M","F"] },
+      { id: "nascimento", label: "Data de Nascimento", type: "date" },
+      { id: "crm", label: "CRM", type: "text" },
+      { id: "especializacao", label: "Especialização", type: "text" },
+      { id: "senha", label: "Senha", type: "password", colSpan: 2 },
     ],
     profissional: [
-      { id: "nome", label: "Nome Completo", type: "text", placeholder: "Digite seu nome completo", colSpan: 2 },
-      { id: "sexo", label: "Sexo", type: "select", options: ["Masculino", "Feminino", "Outro"] },
-      { id: "dataNascimento", label: "Data de Nascimento", type: "date" },
-      { id: "cpf", label: "CPF", type: "text", placeholder: "000.000.000-00" },
-      { id: "rg", label: "RG", type: "text", placeholder: "Digite seu RG" },
-      { id: "telefone", label: "Telefone", type: "tel", placeholder: "(81) 00000-0000" },
-      { id: "senha", label: "Senha", type: "password", placeholder: "Crie uma senha" },
+      { id: "nome", label: "Nome Completo", type: "text", colSpan: 2 },
+      { id: "sexo", label: "Sexo", type: "select", options: ["M","F"] },
+      { id: "nascimento", label: "Data de Nascimento", type: "date" },
+      { id: "cpf", label: "CPF", type: "text" },
+      { id: "rg", label: "RG", type: "text" },
+      { id: "telefone", label: "Telefone", type: "tel" },
+      { id: "senha", label: "Senha", type: "password" },
     ],
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  const handleChange = (field, value) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value,
+    }))
+  }
+
+const handleSubmit = async (e) => {
+  e.preventDefault()
+
+  if (!selectedProfile) {
+    toast({
+      title: "Erro",
+      description: "Selecione um perfil",
+      variant: "destructive",
+    })
+    return
+  }
+
+  let endpointMap = {
+    paciente: "/pacientes/saibamais",
+    profissional: "/profissionais",
+    medico: "/medicos",
+  }
+
+  const endpoint = endpointMap[selectedProfile]
+
+  try {
+    console.log("ENVIANDO PARA:", endpoint)
+    console.log("DADOS:", formData)
+
+    await api.post(endpoint, formData)
+
     setIsSubmitted(true)
     toast({
       title: "Sucesso!",
       description: "Cadastro realizado com sucesso!",
     })
+  } catch (error) {
+    console.error("ERRO BACKEND:", error.response?.data || error.message)
+
+    toast({
+      title: "Erro no cadastro",
+      description:
+        error.response?.data?.message ||
+        "Erro ao comunicar com o servidor",
+      variant: "destructive",
+    })
   }
+}
+
+
 
   if (isSubmitted) {
     return (
       <div className="max-w-lg mx-auto text-center">
-        <Card className="rounded-xl shadow-sm">
+        <Card>
           <CardContent className="p-12">
-            <div className="inline-flex p-4 bg-green-100 rounded-full mb-6">
-              <CheckCircle className="w-12 h-12 text-green-600" />
-            </div>
-            <h2 className="text-2xl font-bold text-foreground mb-2">Cadastro Realizado!</h2>
-            <p className="text-muted-foreground mb-6">
-              Seu cadastro foi enviado com sucesso. Em breve você receberá um e-mail de confirmação.
-            </p>
-            <Button onClick={() => onNavigate("login")} className="rounded-xl">
-              Ir para Login
-            </Button>
+            <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />
+            <h2 className="text-2xl font-bold mb-2">Cadastro Realizado!</h2>
+            <Button onClick={() => onNavigate("login")}>Ir para Login</Button>
           </CardContent>
         </Card>
       </div>
@@ -110,54 +153,50 @@ export function CadastroPage({ onNavigate }) {
 
     return (
       <div className="max-w-2xl mx-auto">
-        <button
-          onClick={() => setSelectedProfile(null)}
-          className="flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6 transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Voltar para seleção
+        <button onClick={() => setSelectedProfile(null)} className="flex gap-2 mb-4">
+          <ArrowLeft /> Voltar
         </button>
 
-        <Card className="rounded-xl shadow-sm">
+        <Card>
           <CardHeader>
-            <CardTitle>
-              Cadastro de {profiles.find((p) => p.id === selectedProfile)?.title.replace("Sou ", "")}
-            </CardTitle>
-            <CardDescription>Preencha seus dados para criar sua conta</CardDescription>
+            <CardTitle>Cadastro</CardTitle>
+            <CardDescription>Preencha os dados</CardDescription>
           </CardHeader>
+
           <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} className="grid gap-4">
+              <div className="grid sm:grid-cols-2 gap-4">
                 {fields.map((field) => (
-                  <div key={field.id} className={`space-y-2 ${field.colSpan === 2 ? "sm:col-span-2" : ""}`}>
-                    <Label htmlFor={field.id}>{field.label}</Label>
+                  <div key={field.id} className={field.colSpan === 2 ? "sm:col-span-2" : ""}>
+                    <Label>{field.label}</Label>
+
                     {field.type === "select" ? (
-                      <Select>
-                        <SelectTrigger className="rounded-xl">
+                      <Select value={formData[field.id] || ""} onValueChange={(v) => handleChange(field.id, v)}>
+
+                        <SelectTrigger>
                           <SelectValue placeholder="Selecione" />
                         </SelectTrigger>
                         <SelectContent>
                           {field.options.map((option) => (
-                            <SelectItem key={option} value={option.toLowerCase()}>
+                            <SelectItem key={option} value={option}>
                               {option}
                             </SelectItem>
                           ))}
                         </SelectContent>
                       </Select>
                     ) : (
-                      <Input
-                        id={field.id}
-                        type={field.type}
-                        placeholder={field.placeholder}
-                        defaultValue={field.defaultValue}
-                        className="rounded-xl"
+                     <Input
+                         type={field.type}
+                          value={formData[field.id] ?? field.defaultValue ?? ""}
+                          onChange={(e) => handleChange(field.id, e.target.value)}
                       />
+
                     )}
                   </div>
                 ))}
               </div>
 
-              <Button type="submit" className="w-full rounded-xl mt-6">
+              <Button type="submit" className="w-full mt-4">
                 Finalizar Cadastro
               </Button>
             </form>
@@ -168,40 +207,19 @@ export function CadastroPage({ onNavigate }) {
   }
 
   return (
-    <div className="max-w-4xl mx-auto">
-      <button
-        onClick={() => onNavigate("home")}
-        className="flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6 transition-colors"
-      >
-        <ArrowLeft className="w-4 h-4" />
-        Voltar para Home
-      </button>
-
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-foreground mb-2">Criar Conta</h1>
-        <p className="text-muted-foreground">Selecione seu perfil para começar</p>
-      </div>
-
-      <div className="grid md:grid-cols-3 gap-6">
-        {profiles.map((profile) => {
-          const Icon = profile.icon
-          return (
-            <Card
-              key={profile.id}
-              className="rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer hover:border-primary"
-              onClick={() => setSelectedProfile(profile.id)}
-            >
-              <CardContent className="p-8 text-center">
-                <div className="inline-flex p-4 bg-primary/10 rounded-xl mb-4">
-                  <Icon className="w-10 h-10 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">{profile.title}</h3>
-                <p className="text-sm text-muted-foreground">{profile.description}</p>
-              </CardContent>
-            </Card>
-          )
-        })}
-      </div>
+    <div className="grid md:grid-cols-3 gap-6">
+      {profiles.map((profile) => {
+        const Icon = profile.icon
+        return (
+          <Card key={profile.id} onClick={() => setSelectedProfile(profile.id)} className="cursor-pointer">
+            <CardContent className="text-center p-6">
+              <Icon className="mx-auto mb-2" />
+              <h3 className="font-bold">{profile.title}</h3>
+              <p>{profile.description}</p>
+            </CardContent>
+          </Card>
+        )
+      })}
     </div>
   )
 }
