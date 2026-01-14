@@ -1,16 +1,36 @@
-Frontend – Saiba + Saúde
+🩺 SAIBA + SAÚDE
+Plataforma Digital para Otimização da Saúde Pública
+🚀 Frontend do Projeto
 
-Este repositório contém o frontend da plataforma Saiba + Saúde, desenvolvido com foco em interatividade, acessibilidade, responsividade e boa experiência do usuário.
+Este repositório contém o FRONTEND da plataforma Saiba + Saúde, desenvolvido com foco em:
 
-🧱 Tecnologias Utilizadas
+Experiência do usuário
 
-A base do projeto foi construída com Next.js e React, utilizando a diretiva "use client" para permitir maior interatividade nos componentes do lado do cliente.
+Acessibilidade
 
-A aplicação segue o fluxo de SPA (Single Page Application), priorizando a troca dinâmica de componentes sem a necessidade de recarregar a página, garantindo uma navegação mais fluida.
+Performance
 
-🎨 Interface e Componentes
+Interatividade
 
-A interface utiliza um conjunto de bibliotecas modernas:
+🧱 STACK PRINCIPAL
+⚛️ Next.js + React
+
+A base do projeto foi construída com Next.js e React, utilizando a diretiva:
+
+"use client"
+
+Isso permite maior interatividade no lado do cliente.
+
+A aplicação segue o padrão:
+
+🔄 SPA — Single Page Application
+
+➡️ Troca de componentes sem recarregar a página
+➡️ Navegação fluida
+➡️ Melhor experiência para o usuário final
+
+🎨 INTERFACE & COMPONENTES
+Bibliotecas utilizadas:
 
 Tailwind CSS
 
@@ -20,33 +40,57 @@ shadcn/ui
 
 Lucide React
 
-Essa combinação permite criar componentes responsivos, acessíveis e com visual consistente.
+Essas tecnologias garantem uma interface:
 
-📚 Por que essas bibliotecas?
-🔹 Tailwind CSS
+✔️ Responsiva
+✔️ Moderna
+✔️ Acessível
+✔️ Consistente
 
-Usado para dar mais agilidade no desenvolvimento.
-Em vez de escrever muitas linhas de CSS, utilizamos classes utilitárias diretamente nos componentes, acelerando a criação da interface.
+📚 POR QUE ESSAS BIBLIOTECAS?
+🎯 Tailwind CSS
 
-🔹 Radix UI
+Mais agilidade no desenvolvimento.
 
-Biblioteca headless (sem estilo visual), focada em acessibilidade.
-Fornece a base funcional para componentes como abas, diálogos e menus.
+Em vez de escrever várias linhas de CSS, usamos classes utilitárias diretamente nos componentes.
 
-🔹 shadcn/ui
+♿ Radix UI
 
-Integra o Radix UI com o Tailwind CSS, oferecendo componentes acessíveis, estilizados e totalmente customizáveis.
+Biblioteca headless (sem estilo) focada em acessibilidade.
 
-🔹 Lucide React
+Fornece a base funcional de componentes como abas, diálogos e menus.
 
-Biblioteca de ícones leves e modernos, utilizada para manter a interface intuitiva (ícones de perfil, navegação, ações, etc).
+🧩 shadcn/ui
 
-🧭 Arquitetura e Experiência do Usuário
+Une o Radix UI com o Tailwind CSS.
 
-Navegação fluida sem recarregamento de página
+✔️ Componentes acessíveis
+✔️ Estilo customizável
+✔️ Código limpo
 
-Componentes reutilizáveis
+🎨 Lucide React
 
-Layout responsivo
+Biblioteca de ícones leves e modernos.
 
-Foco em acessibilidade e clareza visual
+Responsável pelos ícones de perfil, navegação e ações da interface.
+
+🧭 ARQUITETURA & UX
+
+🔹 Componentes reutilizáveis
+
+🔹 Layout totalmente responsivo
+
+🔹 Navegação intuitiva
+
+🔹 Foco em acessibilidade
+
+ℹ️ OBSERVAÇÃO TÉCNICA
+
+O projeto possui gerenciamento global de temas (Light/Dark Mode) utilizando:
+
+next-themes + ThemeProvider
+
+⚠️ Recurso existente, mas não é o foco principal da aplicação.
+
+💙 SAIBA + SAÚDE
+Tecnologia que aproxima. Gestão que transforma.
