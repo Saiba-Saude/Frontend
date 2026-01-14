@@ -97,15 +97,5 @@ Responsável pelos ícones de navegação, perfis e ações da interface.
 
 ---
 
-## ℹ️ Observação Técnica
-
-O projeto possui gerenciamento global de temas (Light/Dark Mode) utilizando:
-
-next-themes + ThemeProvider
-
-Esse recurso existe, mas não é o foco principal da aplicação.
-
----
-
 ## 💙 Saiba + Saúde
 ### Tecnologia que aproxima. Gestão que transforma.
