@@ -1,9 +1,9 @@
-# 🩺 SAIBA + SAÚDE
+#  SAIBA + SAÚDE
 ## Plataforma Digital para Otimização da Saúde Pública
 
 ---
 
-## 🚀 Frontend do Projeto
+##  Frontend do Projeto
 
 Este repositório contém o **FRONTEND da plataforma Saiba + Saúde**, desenvolvido com foco em:
 
@@ -14,9 +14,9 @@ Este repositório contém o **FRONTEND da plataforma Saiba + Saúde**, desenvolv
 
 ---
 
-## 🧱 Stack Principal
+##  Stack Principal
 
-### ⚛️ Next.js + React
+###  Next.js + React
 
 A base do projeto foi construída com **Next.js** e **React**, utilizando a diretiva:
 
@@ -26,7 +26,7 @@ Isso permite maior interatividade no lado do cliente.
 
 A aplicação segue o padrão:
 
-### 🔄 SPA — Single Page Application
+###  SPA — Single Page Application
 
 - Troca de componentes sem recarregar a página  
 - Navegação fluida  
@@ -34,7 +34,7 @@ A aplicação segue o padrão:
 
 ---
 
-## 🎨 Interface & Componentes
+##  Interface & Componentes
 
 ### Bibliotecas utilizadas:
 
@@ -52,9 +52,9 @@ Essas tecnologias garantem uma interface:
 
 ---
 
-## 📚 Por que essas bibliotecas?
+##  Por que essas bibliotecas?
 
-### 🎯 Tailwind CSS
+###  Tailwind CSS
 
 Mais agilidade no desenvolvimento.
 
@@ -62,7 +62,7 @@ Em vez de escrever várias linhas de CSS, utilizamos classes utilitárias direta
 
 ---
 
-### ♿ Radix UI
+###  Radix UI
 
 Biblioteca headless (sem estilo), focada em acessibilidade.
 
@@ -70,7 +70,7 @@ Fornece a base funcional de componentes como abas, diálogos e menus.
 
 ---
 
-### 🧩 shadcn/ui
+###  shadcn/ui
 
 Integra o Radix UI ao Tailwind CSS.
 
@@ -80,7 +80,7 @@ Integra o Radix UI ao Tailwind CSS.
 
 ---
 
-### 🎨 Lucide React
+###  Lucide React
 
 Biblioteca de ícones leves e modernos.
 
@@ -88,7 +88,7 @@ Responsável pelos ícones de navegação, perfis e ações da interface.
 
 ---
 
-## 🧭 Arquitetura & UX
+##  Arquitetura & UX
 
 - Componentes reutilizáveis  
 - Layout responsivo  
@@ -97,5 +97,5 @@ Responsável pelos ícones de navegação, perfis e ações da interface.
 
 ---
 
-## 💙 Saiba + Saúde
+##  Saiba + Saúde
 ### Tecnologia que aproxima. Gestão que transforma.
