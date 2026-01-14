@@ -16,6 +16,7 @@ export default function Page() {
   const [currentPage, setCurrentPage] = useState("home")
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [loggedPage, setLoggedPage] = useState("perfil")
+
   const [userData, setUserData] = useState({
     nome: "João Silva",
     tipo: "Paciente",
@@ -69,13 +70,27 @@ export default function Page() {
     },
   ])
 
-  const handleLogin = (userType) => {
-    setUserData((prev) => ({ ...prev, tipo: userType }))
+  const handlePublicNavigate = (page) => {
+    const privatePages = ["perfil", "agendamentos", "campanhas", "unidades", "historico"]
+
+    if (privatePages.includes(page)) {
+      setCurrentPage("login")
+      return
+    }
+
+    setCurrentPage(page)
+  }
+
+  const handleLogin = (user) => {
+    setUserData((prev) => ({ ...prev, tipo: user.userType }))
     setIsLoggedIn(true)
     setLoggedPage("perfil")
   }
 
   const handleLogout = () => {
+    localStorage.removeItem("token")
+    localStorage.removeItem("userType")
+
     setIsLoggedIn(false)
     setCurrentPage("home")
   }
@@ -91,15 +106,26 @@ export default function Page() {
   if (isLoggedIn) {
     return (
       <div className="flex min-h-screen bg-background">
-        <LoggedSidebar currentPage={loggedPage} onNavigate={setLoggedPage} onLogout={handleLogout} />
+        <LoggedSidebar
+          currentPage={loggedPage}
+          onNavigate={setLoggedPage}
+          onLogout={handleLogout}
+        />
         <main className="flex-1 ml-64 p-8">
-          {loggedPage === "perfil" && <PerfilPage userData={userData} onUpdateUserData={handleUpdateUserData} />}
+          {loggedPage === "perfil" && (
+            <PerfilPage userData={userData} onUpdateUserData={handleUpdateUserData} />
+          )}
           {loggedPage === "agendamentos" && (
-            <AgendamentosPage agendamentos={agendamentos} onAddAgendamento={handleAddAgendamento} />
+            <AgendamentosPage
+              agendamentos={agendamentos}
+              onAddAgendamento={handleAddAgendamento}
+            />
           )}
           {loggedPage === "campanhas" && <CampanhasPage />}
           {loggedPage === "unidades" && <UnidadesPage />}
-          {loggedPage === "historico" && <HistoricoPage agendamentos={agendamentos} />}
+          {loggedPage === "historico" && (
+            <HistoricoPage agendamentos={agendamentos} />
+          )}
         </main>
       </div>
     )
@@ -107,11 +133,15 @@ export default function Page() {
 
   return (
     <div className="flex min-h-screen bg-background">
-      <Sidebar currentPage={currentPage} onNavigate={setCurrentPage} />
+      <Sidebar currentPage={currentPage} onNavigate={handlePublicNavigate} />
       <main className="flex-1 ml-64 p-8">
         {currentPage === "home" && <HomePage onNavigate={setCurrentPage} />}
-        {currentPage === "login" && <LoginPage onNavigate={setCurrentPage} onLogin={handleLogin} />}
-        {currentPage === "cadastro" && <CadastroPage onNavigate={setCurrentPage} />}
+        {currentPage === "login" && (
+          <LoginPage onNavigate={setCurrentPage} onLogin={handleLogin} />
+        )}
+        {currentPage === "cadastro" && (
+          <CadastroPage onNavigate={setCurrentPage} />
+        )}
       </main>
     </div>
   )
