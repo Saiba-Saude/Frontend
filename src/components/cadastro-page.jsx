@@ -101,15 +101,13 @@ const handleSubmit = async (e) => {
 
   let endpointMap = {
     paciente: "/pacientes/saibamais",
-    profissional: "/profissionais",
+    profissional: "/profissional",
     medico: "/medicos",
   }
 
   const endpoint = endpointMap[selectedProfile]
 
   try {
-    console.log("ENVIANDO PARA:", endpoint)
-    console.log("DADOS:", formData)
 
     await api.post(endpoint, formData)
 

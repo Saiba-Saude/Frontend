@@ -38,7 +38,7 @@ export function LoginPage({ onNavigate, onLogin }) {
     paciente: {
       icon: User,
       fields: [
-        { id: "cartaoSus", label: "Número do Cartão do SUS", placeholder: "Digite o número do cartão", type: "text" },
+        { id: "cartaosus", label: "Número do Cartão do SUS", placeholder: "Digite o número do cartão", type: "text" },
         { id: "senha", label: "Senha", placeholder: "Digite sua senha", type: "password" },
       ],
     },
@@ -51,7 +51,7 @@ export function LoginPage({ onNavigate, onLogin }) {
     })
   }
 
-  const handleSubmit = (e) => {
+const handleSubmit = (e) => {
     e.preventDefault()
 
     api
@@ -76,7 +76,6 @@ export function LoginPage({ onNavigate, onLogin }) {
         })
       })
   }
-
   return (
     <div className="max-w-lg mx-auto">
       <button
